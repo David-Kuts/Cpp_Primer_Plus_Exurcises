@@ -4,7 +4,7 @@
 
 int main() {
 	std::string months[] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
-	int* p_monthlySalesAmounts = new int [12];
+	int* p_monthlySalesAmounts = new int[12];
 
 	std::cout << "Enter the sales amount for:" << std::endl;
 
@@ -19,7 +19,7 @@ int main() {
 
 	std::cout << "Tatal amout of the sold books:" << totalSoldBookAmouts << std::endl;
 
-	delete p_monthlySalesAmounts;
+	delete[] p_monthlySalesAmounts;
 
 	return 0;
 }
