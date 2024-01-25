@@ -19,5 +19,7 @@ int main() {
 
 	std::cout << "Tatal amout of the sold books:" << totalSoldBookAmouts << std::endl;
 
+	delete p_monthlySalesAmounts;
+
 	return 0;
 }
