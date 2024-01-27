@@ -3,6 +3,7 @@
 
 constexpr int STR_SIZE = 50;
 constexpr int ARR_SIZE = 3;
+
 struct Bop {
 	char fullName[STR_SIZE];
 	char title[STR_SIZE];
