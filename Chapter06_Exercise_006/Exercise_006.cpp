@@ -35,8 +35,7 @@ int main() {
 		if (p_patrons[i].donation >= 10000) {
 			std::cout << p_patrons[i].name << " - " << p_patrons[i].donation << std::endl;
 			grandPatronsExist = true;
-		}
-		else {
+		} else {
 			patronsIndex.push_back(i);
 			patronsExist = true;
 		}
@@ -49,7 +48,6 @@ int main() {
 	std::cout << std::endl << "Patrons:" << std::endl;
 
 	for (size_t i = 0; i < patronsIndex.size(); i++) {
-		
 		std::cout << p_patrons[patronsIndex[i]].name << " - " << p_patrons[patronsIndex[i]].donation << std::endl;
 	}
 
