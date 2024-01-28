@@ -24,7 +24,7 @@ int main() {
 		std::cin >> p_patrons[i].donation;
 	}
 
-	std::vector<int> lowPatronsIndex;
+	std::vector<int> patronsIndex;
 
 	std::cout << std::endl << "Grand Patrons:" << std::endl;
 
@@ -37,7 +37,7 @@ int main() {
 			grandPatronsExist = true;
 		}
 		else {
-			lowPatronsIndex.push_back(i);
+			patronsIndex.push_back(i);
 			patronsExist = true;
 		}
 	}
@@ -48,14 +48,16 @@ int main() {
 
 	std::cout << std::endl << "Patrons:" << std::endl;
 
-	for (size_t i = 0; i < lowPatronsIndex.size(); i++) {
+	for (size_t i = 0; i < patronsIndex.size(); i++) {
 		
-		std::cout << p_patrons[lowPatronsIndex[i]].name << " - " << p_patrons[lowPatronsIndex[i]].donation << std::endl;
+		std::cout << p_patrons[patronsIndex[i]].name << " - " << p_patrons[patronsIndex[i]].donation << std::endl;
 	}
 
 	if (!patronsExist) {
 		std::cout << "none" << std::endl;
 	}
+
+	delete[] p_patrons;
 
 	return 0;
 }
