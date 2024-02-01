@@ -25,14 +25,12 @@ int main() {
 double fillArray(double arr[], int size) {
 	int indexQuantity = 0;
 
-	std::cout << "Enter a number (not a number to quit): ";
-
 	for (int i = 0; i < size; i++) {
 		double tmp;
+		std::cout << "Enter a number (not a number to quit): ";
 		if (std::cin >> tmp) {
 			arr[i] = tmp;
 			indexQuantity = i + 1;
-			std::cout << "Enter a number (not a number to quit): ";
 		} else {
 			return indexQuantity;
 		}
