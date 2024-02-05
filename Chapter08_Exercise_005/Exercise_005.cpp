@@ -6,7 +6,7 @@ constexpr int SIZE = 5;
 template <typename T>
 T max5(T arr[SIZE]) {
 	T max = arr[0];
-	for (int i = 0; i < SIZE; i++) {
+	for (int i = 1; i < SIZE; i++) {
 		if (max < arr[i]) {
 			max = arr[i];
 		}
