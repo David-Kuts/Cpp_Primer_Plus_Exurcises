@@ -22,7 +22,7 @@ int main() {
 	p_arr[1].slag = 20;
 
 	for (int i = 0; i < 2; i++) {
-		cout << "p_arr" << '[' << i << ']' << " adredd: " << &p_arr[i] << ' ' << p_arr[i].dross << ' ' << p_arr[i].slag << endl;
+		cout << "p_arr" << '[' << i << ']' << " adress: " << &p_arr[i] << ' ' << p_arr[i].dross << ' ' << p_arr[i].slag << endl;
 	}
 
 	p_arr = new Chaff[2];
@@ -33,7 +33,7 @@ int main() {
 	p_arr[1].slag = 40;
 
 	for (int i = 0; i < 2; i++) {
-		cout << "p_arr" << '[' << i << ']' << " adredd: " << &p_arr[i] << ' ' << p_arr[i].dross << ' ' << p_arr[i].slag << endl;
+		cout << "p_arr" << '[' << i << ']' << " adress: " << &p_arr[i] << ' ' << p_arr[i].dross << ' ' << p_arr[i].slag << endl;
 	}
 
 	delete[] p_arr;
