@@ -18,8 +18,8 @@ public:
 	BankAccount(string n, string a);
 	BankAccount(string n, string a, unsigned int b);
 
-	inline void show() const { cout << "Name: " << name << ", Account number: " << accountNumber << ", balance: " << balance << endl; }
-	inline void add(unsigned int m) { balance += m; }
-	inline void withdraw(unsigned int m) { balance -= m; }
+	void show() const { cout << "Name: " << name << ", Account number: " << accountNumber << ", balance: " << balance << endl; }
+	void add(unsigned int m) { balance += m; }
+	void withdraw(unsigned int m) { balance -= m; }
 };
 
