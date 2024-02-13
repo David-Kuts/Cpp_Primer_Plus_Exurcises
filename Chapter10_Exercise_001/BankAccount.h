@@ -1,5 +1,6 @@
-#pragma once
 // BankAccount.h
+#pragma once
+
 #include <iostream>
 #include <string>
 
@@ -15,8 +16,8 @@ private:
 	unsigned long balance;
 public:
 	BankAccount();
-	BankAccount(string n, string a);
-	BankAccount(string n, string a, unsigned int b);
+	BankAccount(const string& n, const string& a);
+	BankAccount(const string& n, const string& a, unsigned int b);
 
 	void show() const { cout << "Name: " << name << ", Account number: " << accountNumber << ", balance: " << balance << endl; }
 	void add(unsigned int m) { balance += m; }

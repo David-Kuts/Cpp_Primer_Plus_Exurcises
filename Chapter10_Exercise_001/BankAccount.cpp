@@ -5,13 +5,13 @@ BankAccount::BankAccount() {
 	accountNumber = "none";
 	balance = 0;
 }
-BankAccount::BankAccount(string n, string a) {
+BankAccount::BankAccount(const string& n, const string& a) {
 	name = n;
 	accountNumber = a;
 	balance = 0;
 }
 
-BankAccount::BankAccount(string n, string a, unsigned int b) {
+BankAccount::BankAccount(const string& n, const string& a, unsigned int b) {
 	name = n;
 	accountNumber = a;
 	balance = b;
