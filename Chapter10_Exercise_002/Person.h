@@ -4,19 +4,22 @@
 #include <iostream>
 #include <string>
 
+using std::cout;
+using std::cin;
+using std::endl;
 using std::string;
+
 
 class Person {
 private:
 	static const int LIMIT = 25;
-	string lname; // Person’s last name
+	std::string lname;
 	char fname[LIMIT]; // Person’s first name
 public:
-	Person() { lname = ""; fname[0] = '\0'; } // #1
-	Person(const string& ln, const char* fn = "Heyyou"); // #2
-	Person(const string& ln, const char* fn); // #2
+	Person() { lname = ""; fname[0] = '\0'; }
+	Person(const string& ln);
+	Person(const string& ln, const char* fn);
 
-	// the following methods display lname and fname
-	void Show() const; // firstname lastname format
-	void FormalShow() const; // lastname, firstname format
+	void Show() const { cout << "First name: " << fname << ", Last name: " << lname << endl; }
+	void FormalShow() const { cout << "Last name: " << lname << ", First name: " << fname << endl; }
 };
