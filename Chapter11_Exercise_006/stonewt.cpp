@@ -25,28 +25,28 @@ void Stonewt::show_stn() const {
 	cout << stone << " stone, " << pds_left << " pounds\n";
 }
 
-bool Stonewt::operator<=(const Stonewt& st) const {
-	return stone <= st.stone;
-}
-
 bool Stonewt::operator<(const Stonewt& st) const {
 	return stone < st.stone;
 }
 
+bool Stonewt::operator==(const Stonewt& st) const {
+	return !(st.stone < stone) && !(stone < st.stone);
+}
+
+bool Stonewt::operator<=(const Stonewt& st) const {
+	return (stone < st.stone) || (stone == st.stone);
+}
+
 bool Stonewt::operator>(const Stonewt& st) const {
-	return stone > st.stone;
+	return !(stone < st.stone) && !(stone == st.stone);
 }
 
 bool Stonewt::operator>=(const Stonewt& st) const {
-	return stone >= st.stone;
+	return (stone > st.stone) || (stone == st.stone);
 }
 
 bool Stonewt::operator!=(const Stonewt& st) const {
-	return stone != st.stone;
-}
-
-bool Stonewt::operator==(const Stonewt& st) const {
-	return stone == st.stone;
+	return !(stone == st.stone);
 }
 
 void Stonewt::show_lbs() const {
