@@ -22,7 +22,7 @@ const std::string& Wine::getLabel() const {
 	return label;
 }
 
-int Wine::sum() {
+int Wine::sum() const {
 	return data.getSecondValue().sum();
 }
 

@@ -12,7 +12,7 @@ public:
 	Wine(const char* lable, int yearsQuantity);
 	void getBottles();
 	const std::string& getLabel() const;
-	int sum();
+	int sum() const;
 	void show() const;
 private:
 	std::string label;
