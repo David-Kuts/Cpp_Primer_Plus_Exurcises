@@ -4,7 +4,7 @@
 
 bool isPalindrome(const std::string& str) {
 	std::string::const_iterator left(str.begin());
-	auto right = str.end() - 1;
+	std::string::const_iterator right = str.end() - 1;
 	while (left < right) {
 		if (*left != *right) {
 			return false;
